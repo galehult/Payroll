@@ -57,12 +57,13 @@ function basicPay(employee: employee, dsr: dailyScheduleReport) {
     }
 
     if (employee.paymentScheme === "Daily") {
-        return dsr.reg * employee.dailyRate;
+        return dsr.reg * (employee.dailyRate / param[1]);
     }
 
     throw new Error(`Unsupported payment scheme: ${employee.paymentScheme}`);
 }
 
+//AUT FOR MONTHLY EMPLOYEES ONLY!!!!!
 const absence = (employee: employee, dsr: dailyScheduleReport, param: number[]): number => 
     employee.dailyRate * dsr.absences;
 
@@ -91,7 +92,7 @@ const rdnd = (employee: employee, dsr: dailyScheduleReport, param: number[]): nu
     ((employee.dailyRate / param[1]) * 1.43) * dsr.rdnd;
 
 const rdndot = (employee: employee, dsr: dailyScheduleReport, param: number[]): number =>
-    ((employee.dailyRate / param[1] * 1.43)) * dsr.rdndot;
+    ((employee.dailyRate / param[1] * 1.8590)) * dsr.rdndot;
 
 const lhreg = (employee: employee, dsr: dailyScheduleReport): number =>
     ((employee.dailyRate * 2) * dsr.lhreg);
@@ -109,10 +110,58 @@ const shreg = (employee: employee, dsr: dailyScheduleReport): number =>
     (employee.dailyRate * 1.3) * dsr.shreg;
 
 const shot = (employe: employee, dsr: dailyScheduleReport, param: number[]): number =>
-((employee.dailyRate / param[1]) * 1.69) * dsr.shot;
+    ((employee.dailyRate / param[1]) * 1.69) * dsr.shot;
 
 const shnd = (employee: employee, dsr: dailyScheduleReport, param: number[]) =>
     ((employee.dailyRate / param[1]) * 1.69) * dsr.shnd;
 
 const shndot = (employee: employee, dsr: dailyScheduleReport, param: number[]) =>
-((employee.dailyRate / param[1]) * 1.859) * dsr.shndot;
+    ((employee.dailyRate / param[1]) * 1.859) * dsr.shndot;
+
+const rdlhreg = (employee: employee, dsr: dailyScheduleReport, param: number[]) =>
+    ((employee.dailyRate / param[1]) * 2.6) * dsr.rdlhreg;
+
+const rdlhot = (employee: employee, dsr: dailyScheduleReport, param: number[]) =>
+    ((employee.dailyRate / param[1]) * 3.38) * dsr.rdlhot;
+
+const rdlhnd = (employee: employee, dsr: dailyScheduleReport, param: number[]) =>
+    ((employee.dailyRate / param[1]) * 2.86) * dsr.rdlhnd;
+
+const rdlhndot = (employee: employee, dsr: dailyScheduleReport, param: number[]) =>
+    ((employee.dailyRate / param[1]) * 3.719) * dsr.rdlhndot;
+
+const rdshreg = (employee: employee, dsr: dailyScheduleReport, param: number[]) =>
+    ((employee.dailyRate / param[1]) * 1.5) * dsr.rdlhndot;
+
+const rdshot = (employee: employee, dsr: dailyScheduleReport, param: number[]) =>
+    ((employee.dailyRate / param[1]) * 1.95) * dsr.rdshot;
+
+const rdshnd = (employee: employee, dsr: dailyScheduleReport, param: number[]) =>
+    ((employee.dailyRate / param[1]) * 1.65) * dsr.rdshot;
+
+const rdshndot = (employee: employee, dsr: dailyScheduleReport, param: number[]) =>
+    ((employee.dailyRate / param[1]) * 2.145) * dsr.rdshndot;
+
+const lhshreg = (employee: employee, dsr: dailyScheduleReport, param: number[]) =>
+    ((employee.dailyRate / param[1]) * 1.6) * dsr.lhshreg;
+
+const lhshot = (employee: employee, dsr: dailyScheduleReport, param: number[]) =>
+    ((employee.dailyRate / param[1]) * 3.38) * dsr.lhshot;
+
+const lhshnd = (employee: employee, dsr: dailyScheduleReport, param: number[]) =>
+    ((employee.dailyRate / param[1]) * 1.86) * dsr.lhshnd;
+
+const lhshndot = (employee: employee, dsr: dailyScheduleReport, param: number[]) =>
+    ((employee.dailyRate / param[1]) * 3.718) * dsr.lhshndot;
+
+const rdlhshreg = () =>
+(());
+
+const rdlhshot = () =>
+(());
+
+const rdlhshnd = () =>
+(());
+
+const rdlhshndot = () =>
+(());

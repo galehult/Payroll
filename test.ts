@@ -57,20 +57,12 @@ function basicPay(employee: employee, dsr: dailyScheduleReport) {
     }
 
     if (employee.paymentScheme === "Daily") {
-        return dsr.reg * employee.dailyRate;
+        return dsr.reg  * (employee.dailyRate * Number(param[1]));
     }
 
     throw new Error(`Unsupported payment scheme: ${employee.paymentScheme}`);
 }
 
-const undertime = (employee: employee, dsr: dailyScheduleReport, param: string[]): number => 
-    ((employee.dailyRate / Number(param[1])) / 60) * dsr.undertime;
-
 console.log(`Employee: ${employee.name}`);
 console.log(`Payment Scheme: ${employee.paymentScheme}`);
 console.log(`Basic Pay: ${basicPay(employee, dsr)}`);
-console.log(`Undertime Deduction: ${undertime(employee, dsr, param)}`);
-// console.log(`Daily Rate: ${employee.dailyRate}`);
-// console.log(`Hourly Rate: ${employee.dailyRate / 9}`);
-// console.log(`Minute Rate: ${(employee.dailyRate / 9) / 60}, Undertime: ${((employee.dailyRate / 9) / 60) * dsr.undertime}`);
-console.log((558.9041 / 60) * dsr.undertime);
