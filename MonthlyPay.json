@@ -1,0 +1,50 @@
+{
+    "month1Salary": {
+        "Period1": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 },
+        "Period2": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 }
+    },
+    "month2Salary": {
+        "Period1": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 },
+        "Period2": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 }
+    },
+    "month3Salary": {
+        "Period1": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 },
+        "Period2": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 }
+    },
+    "month4Salary": {
+        "Period1": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 },
+        "Period2": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 }
+    },
+    "month5Salary": {
+        "Period1": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 },
+        "Period2": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 }
+    },
+    "month6Salary": {
+        "Period1": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 },
+        "Period2": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 }
+    },
+    "month7Salary": {
+        "Period1": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 },
+        "Period2": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 }
+    },
+    "month8Salary": {
+        "Period1": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 },
+        "Period2": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 }
+    },
+    "month9Salary": {
+        "Period1": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 },
+        "Period2": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 }
+    },
+    "month10Salary": {
+        "Period1": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 },
+        "Period2": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 }
+    },
+    "month11Salary": {
+        "Period1": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 },
+        "Period2": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 }
+    },
+    "month12Salary": {
+        "Period1": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 },
+        "Period2": { "Pay": 0.0000, "Abs": 0.0000, "Uty": 0.0000, "Tdy": 0.0000 }
+    }
+}
