@@ -223,9 +223,23 @@ const rdlhshnd = (employee: employee, dsr: dailyScheduleReport, param: number[],
 const rdlhshndot = (employee: employee, dsr: dailyScheduleReport, param: number[], pim: payrollRates): number =>
     ((employee.dailyRate / param[1]) * pim.rdlhshndot) * dsr.rdlhshndot;
 
+function phic(employee: employee) {
+    if (employee.monthlySalary / 2 < 10000) {
+        return 250.0000;
+    } 
+    
+    if (employee.monthlySalary / 2 >= 10000.0100 && employee.monthlySalary / 2 <= 99999.9999) {
+        return employee.monthlySalary * .05 / 2 / 2;
+    }
+
+    if (employee.monthlySalary / 2 >= 100000.0000) {
+        return 2500.0000;
+    }
+}
+
 function withholding(employee: employee, dsr: dailyScheduleReport, param: number, pim: payrollRates) {
     let sss = 0;
-    let phic = 0;
+    let phil = phic(employee);
     let hdmf = 100;
 
     let grossTotal = (basicPay(employee, dsr, parameter) - (absence(employee, dsr, parameter) + undertime(employee, dsr, parameter) + tardy(employee, dsr, parameter)) + overtime(employee, dsr, parameter, pim) + nd(employee, dsr, parameter, pim) + ndot(employee, dsr, parameter, pim) + rdreg(employee, dsr, parameter, pim) + rdnd(employee, dsr, parameter, pim) + rdndot(employee, dsr, parameter, pim) + lhreg(employee, dsr, parameter, pim) + lhot(employee, dsr, parameter, pim) + lhnd(employee, dsr, parameter, pim) + lhndot(employee, dsr, parameter, pim) + shreg(employee, dsr, parameter, pim) + shot(employee, dsr, parameter, pim) + shnd(employee, dsr, parameter, pim) + shndot(employee, dsr, parameter, pim) + rdlhreg(employee, dsr, parameter, pim) + rdlhot(employee, dsr, parameter, pim) + rdlhnd(employee, dsr, parameter, pim) + rdlhndot(employee, dsr, parameter, pim) + rdshreg(employee, dsr, parameter, pim) + rdshot(employee, dsr, parameter, pim) + rdshnd(employee, dsr, parameter, pim) + rdshndot(employee, dsr, parameter, pim) + lhshreg(employee, dsr, parameter, pim) + lhshot(employee, dsr, parameter, pim) + lhshnd(employee, dsr, parameter, pim) + lhshndot(employee, dsr, parameter, pim) + rdlhshreg(employee, dsr, parameter, pim) + rdlhshot(employee, dsr, parameter, pim) + rdlhshnd(employee, dsr, parameter, pim) + rdlhshndot(employee, dsr, parameter, pim)) - (sss + phic + hdmf);
